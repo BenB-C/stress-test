@@ -1,1 +1,7 @@
+.output {
+  margin-top: 20px;
+}
 
+#resetBtn {
+  display: none;
+}
