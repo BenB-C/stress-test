@@ -11,7 +11,7 @@
 $(function() {
   $("#stressForm").submit(function(event){
     event.preventDefault();
-
+    $(".output").empty();
 // Create var so we can put it all into array !
     var checkedWarningSigns = [];
 
@@ -28,6 +28,9 @@ $(function() {
 // Another way to do above two lines with one line:
   // checkedWarningSigns.push( $(this).val() );
     });
+    if(checkedWarningSigns.includes("sleep") && checkedWarningSigns.includes("overwhelmed")) {
+      $(".output").append("<p>You should try to meditate.</p>");
+    }
     $("input:checkbox[name=health]:checked").each(function(){
       $(this).val();
     });
